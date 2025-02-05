@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>task</title>
+    <meta name="author" content="Codeconvey" />
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+	
+</head>
+<body>
+		
+<div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+            <!-- AD HERE -->
+        </div>
+        <div class="col-rt-2">
+            <ul>
+                <li><a href=" ">Home</a></li>
+            </ul>
+        </div>
+        <div class="col-rt-3">
+            <ul>
+                <li><a href="#card">Product Cards</a></li>
+                
+                <li><a href="#gallery">Image Gallery</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1>Product Cards with Countdown </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="rt-container">
+        <div class="col-rt-12">
+            <div class="Scriptcontent">
+              
+              <!-- Countdown Timer -->
+    <div class="container">
+              <h1>Upcoming Event Sale</h1>
+          <div id="countdown">
+            <div class="time-box"><span id="days">00</span><small>Days</small></div>
+            <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+            <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+            <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+           </div>
+    </div>
+
+
+              <!-- DEMO CONTENT -->
+              <h1 style="text-align: center; text-transform: uppercase; color: black;">Products</h1>
+              <div class="container" id="cards">
+                
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                              <img src="img/mobile.jpg" alt="Mobile">
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p>Mobile</p>
+                              <h3>$100.00</h3>
+                              <a href="#">Buy Now</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                              <img src="img/watch.jpg" alt="Watch">
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p>Watch</p>
+                              <h3>$35.00</h3>
+                              <a href="#">Buy Now</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                              <img src="img/bluetooth.jpg" alt="Earphone">
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p>Earphone</p>
+                              <h3>$50.00</h3>
+                              <a href="#">Buy Now</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Image Gallery with Filters -->
+              <div id="gallery">
+                  <h2 style="text-align: center;">Image Gallery</h2>
+
+                  <div class="filter-container">
+                    <select id="categoryFilter" onchange="filterImages()">
+                      <option value="all">All</option>
+                      <option value="nature">Nature</option>
+                      <option value="tech">Tech</option>
+                      <option value="art">Art</option>
+                    </select>
+                  </div>
+                
+                  <div class="gallery-container">
+                    <div class="gallery-item nature">
+                      <img src="img/nature1.jpg" alt="Nature 1" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery-item nature">
+                      <img src="img/nature2.jpg" alt="Nature 2" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery-item nature">
+                        <img src="img/nature3.jpg" alt="Tech 1" onclick="openModal(this)">
+                      </div>
+                      <div class="gallery-item nature">
+                        <img src="img/nature4.jpg" alt="Tech 1" onclick="openModal(this)">
+                      </div>
+                      <div class="gallery-item nature">
+                        <img src="img/nature5.jpg" alt="Tech 1" onclick="openModal(this)">
+                      </div>
+                
+                    <div class="gallery-item tech">
+                      <img src="img/tech1.jpg" alt="Tech 1" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery-item tech">
+                      <img src="img/tech2.jpg" alt="Tech 2" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery-item tech">
+                        <img src="img/tech3.jpg" alt="Tech 2" onclick="openModal(this)">
+                      </div>
+                      <div class="gallery-item tech">
+                        <img src="img/tech4.jpg" alt="Tech 2" onclick="openModal(this)">
+                      </div>
+                      <div class="gallery-item tech">
+                        <img src="img/tech5.jpg" alt="Tech 2" onclick="openModal(this)">
+                      </div>
+                
+                      <div class="gallery-item art">
+                        <img src="img/art1.jpg" alt="Art 5" onclick="openModal(this)">
+                      </div>
+                    <div class="gallery-item art">
+                      <img src="img/art2.jpg" alt="Art 1" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery-item art">
+                      <img src="img/art3.jpg" alt="Art 2" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery-item art">
+                        <img src="img/art4.jpg" alt="Art 3" onclick="openModal(this)">
+                      </div>
+                      <div class="gallery-item art">
+                        <img src="img/art5.jpg" alt="Art 4" onclick="openModal(this)">
+                      </div>
+                
+                  </div>
+                
+                  <!-- Modal -->
+                  <div id="modal" class="modal" onclick="closeModal()">
+                    <img id="modalImage" src="" alt="Selected Image">
+                  </div>
+
+              </div>
+           
+    		</div>
+		</div>
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

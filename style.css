@@ -1,0 +1,579 @@
+
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: #eca2bb;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 300px;
+}
+
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(235, 195, 195, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 800;
+    color: #333;
+    background-color: orange;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+
+
+
+
+/* Countdown Timer Styles */
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #040404;
+  text-align: center;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.time-box {
+  background: #ff6b6b;
+  color: white;
+  padding: 18px;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.time-box:hover {
+  transform: scale(1.1);
+}
+
+small {
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+/* Image Gallery Styles */
+#gallery {
+    margin-top: 40px;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    background: #6a4aed;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-button.active {
+    background: #333;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Product Card Hover Animations */
+.container .card .face.face1 .content img {
+    transition: transform 0.5s ease;
+}
+
+.container .card:hover .face.face1 .content img {
+    transform: scale(1.2);
+}
+
+.container .card .face.face2 .content a {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.container .card:hover .face.face2 .content a {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+ 
+  /* Style the category filter */
+  .filter-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  select:hover {
+    border-color: #007bff;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #0056b3;
+  }
+  
+  /* Gallery container with grid layout */
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+  }
+  
+  /* Hover effect for gallery items */
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style for images inside gallery items */
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 10px;
+  }
+  
+  .modal.show {
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .modal img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Modal close button */
+  .modal::before {
+    content: '×';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+  }
+  
+  .modal::before:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Smooth transition for gallery visibility when filter is applied */
+  .gallery-container.hidden {
+    opacity: 0.5;
+  }
+  
+
+/* Countdown Timer Styles */
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.time-box {
+  background: #ff6b6b;
+  color: white;
+  padding: 20px;
+  width: 80px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.time-box:hover {
+  transform: scale(1.1);
+}
+
+small {
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+/* Image Gallery Styles */
+#gallery {
+  margin-top: 40px;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  background: #6a4aed;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-button.active {
+  background: #333;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Product Card Hover Animations */
+.container .card .face.face1 .content img {
+  transition: transform 0.5s ease;
+}
+
+.container .card:hover .face.face1 .content img {
+  transform: scale(1.2);
+}
+
+.container .card .face.face2 .content a {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.container .card:hover .face.face2 .content a {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+/* Style the category filter */
+.filter-container {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+select:hover {
+  border-color: #007bff;
+}
+
+select:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+/* Gallery container with grid layout */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+/* Hover effect for gallery items */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for images inside gallery items */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.modal img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal close button */
+.modal::before {
+  content: '×';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.modal::before:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Smooth transition for gallery visibility when filter is applied */
+.gallery-container.hidden {
+  opacity: 0.5;
+}

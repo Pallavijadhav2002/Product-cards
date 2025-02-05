@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.time-box {
+    background: #ff6b6b;
+    color: white;
+    padding: 20px;
+    width: 80px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.time-box:hover {
+    transform: scale(1.1);
+}
+
+small {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Upcoming Event Sale</h1>
+        <div id="countdown">
+            <div class="time-box"><span id="days">00</span><small>Days</small></div>
+            <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+            <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+            <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+        </div>
+    </div>
+    <script >
+     // Set the target date (change as needed)
+const eventDate = new Date("Feb 6, 2025 16:24:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const remainingTime = eventDate - now;
+
+    if (remainingTime < 0) {
+        document.getElementById("countdown").innerHTML = "<h2>Sale Ended!</h2>";
+        setTimeout(() => location.reload(), 5000); // Reset after 5 seconds
+        return;
+    }
+
+    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+    document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+    document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial call
+updateCountdown();
+
+
+    </script>
+</body>
+</html>
